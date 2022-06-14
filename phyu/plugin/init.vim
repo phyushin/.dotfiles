@@ -12,6 +12,7 @@ Plug 'eslint/eslint'
 Plug 'Valloric/YouCompleteMe'
 Plug 'neoclide/coc.nvim'
 Plug 'neoclide/coc-eslint'
+Plug 'tanvirtin/monokai.nvim'
 call plug#end()
 
 let mapleader = " "
