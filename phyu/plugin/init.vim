@@ -15,9 +15,11 @@ Plug 'neoclide/coc-eslint'
 Plug 'tanvirtin/monokai.nvim'
 call plug#end()
 
+source $HOME/.config/nvim/sets.vim
 let mapleader = " "
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <F3> :NERDTreeToggle<CR>
+nnoremap <leader>AA :TestSuite<CR>
 
 fun! TrimWhitespace()
     let l:save = winsaveview()

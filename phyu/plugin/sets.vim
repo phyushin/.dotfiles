@@ -23,4 +23,3 @@ set colorcolumn=8
 syntax on
 colorscheme monokai
 
-nnoremap <leader>AA :TestSuite<CR>
