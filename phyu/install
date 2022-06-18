@@ -7,9 +7,10 @@ mkdir -p ~/.config/nvim/lua
 python3 -m pip install --user --upgrade pynvim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 #install ripgrep otherwise the grep wont return anything
-sudo apt-get install ripgrep
+#sudo apt-get install ripgrep
 
-for f in `find . -regex ".*\.vim$\|.*\.lua$" -printf '%f\n'`; do
-    rm -rf ~/.config/nvim/$f
-    ln -s ~/dotfiles/phyu/plugin/$f ~/.config/nvim/$f
+for f in `find ./plugin -name "*.vim" -or -name "*.lua"`; do
+	x=$(echo $f | cut -f3 -d '/');
+	rm -rf ~/.config/nvim/$x
+	ln -s ~/dotfiles/phyu/plugin/$x ~/.config/nvim/$x 
 done
