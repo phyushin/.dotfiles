@@ -1,25 +1,28 @@
+local nnoremap = require("phyu.keymap").nnoremap
 
-let mapleader = " "
-nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+nnoremap("<leader>pv", "<cmd>Ex<CR>")
+nnoremap("<leader>ps", ":lua require('telescope.builtin').grep_string({ search = vim.fn.input('Grep For > ')})<CR>")
 
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <F3> :NERDTreeToggle<CR>
-nnoremap <leader>AA :TestSuite<CR>
+nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
+nnoremap("<leader>fg","<cmd>Telescope live_grep<CR>")
+nnoremap("<leader>fb", "<cmd>Telescope buffers<CR>")
+nnoremap("<leader>fh" ,"<cmd>Telescope help_tags<CR>")
+nnoremap("<F3>", ":NERDTreeToggle<CR>")
+nnoremap("<leader>AA", ":TestSuite<CR>")
 
-"" Git
-noremap <Leader>ga :Gwrite<CR>
-noremap <Leader>gc :Git commit --verbose<CR>
-noremap <Leader>gsh :Git push<CR>
-noremap <Leader>gll :Git pull<CR>
-noremap <Leader>gs :Git<CR>
-noremap <Leader>gb :Git blame<CR>
-noremap <Leader>gd :Gvdiffsplit<CR>
-noremap <Leader>gr :GRemove<CR>
+nnoremap("<Leader>ga",":Gwrite<CR>")
+nnoremap("<Leader>gc",":Git commit --verbose<CR>")
+nnoremap("<Leader>gsh",":Git push<CR>")
+nnoremap("<Leader>gll",":Git pull<CR>")
+nnoremap("<Leader>gs",":Git<CR>")
+nnoremap("<Leader>gb",":Git blame<CR>")
+nnoremap("<Leader>gd",":Gvdiffsplit<CR>")
+nnoremap("<Leader>gr",":GRemove<CR>")
 
-" vim-airline
+
+local result = vim.api.nvim_exec(
+[[
+"" vim-airline
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
@@ -54,3 +57,5 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+]],
+true)
