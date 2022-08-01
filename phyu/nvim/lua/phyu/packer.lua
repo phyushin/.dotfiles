@@ -42,5 +42,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-projectionist'
   use 'thoughtbot/vim-rspec'
   use 'ecomba/vim-ruby-refactoring' 
+  use 'hrsh7th/nvim-compe' 
+
 end)
 

@@ -1,4 +1,2 @@
-print("hello")
-
-require("phyu.set")
-require("phyu.remap")
+require('phyu.set')
+require('phyu.remap')
