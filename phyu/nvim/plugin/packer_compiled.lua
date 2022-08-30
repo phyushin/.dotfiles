@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/phyu/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
   },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/home/phyu/.local/share/nvim/site/pack/packer/start/nvim-compe",
+    url = "https://github.com/hrsh7th/nvim-compe"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/phyu/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -133,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/phyu/.local/share/nvim/site/pack/packer/start/requirements.txt.vim",
     url = "https://github.com/raimon49/requirements.txt.vim"
+  },
+  sonokai = {
+    loaded = true,
+    path = "/home/phyu/.local/share/nvim/site/pack/packer/start/sonokai",
+    url = "https://github.com/sainnhe/sonokai"
   },
   ["split-manpage.vim"] = {
     loaded = true,
