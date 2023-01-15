@@ -1,24 +1,40 @@
 local nnoremap = require("phyu.keymap").nnoremap
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
-nnoremap("<leader>ps", ":lua require('telescope.builtin').grep_string({ search = vim.fn.input('Grep For > ')})<CR>")
+vim.keymap.set("n","<leader>pv", "<cmd>Ex<CR>")
+vim.keymap.set("n","<leader>ps", ":lua require('telescope.builtin').grep_string({ search = vim.fn.input('Grep For > ')})<CR>")
 
-nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
-nnoremap("<leader>fg","<cmd>Telescope live_grep<CR>")
-nnoremap("<leader>fb", "<cmd>Telescope buffers<CR>")
-nnoremap("<leader>fh" ,"<cmd>Telescope help_tags<CR>")
-nnoremap("<F3>", ":NERDTreeToggle<CR>")
-nnoremap("<leader>AA", ":TestSuite<CR>")
+vim.keymap.set("n","<leader>ff", "<cmd>Telescope find_files<CR>")
+vim.keymap.set("n","<leader>fg","<cmd>Telescope live_grep<CR>")
+vim.keymap.set("n","<leader>fb", "<cmd>Telescope buffers<CR>")
+vim.keymap.set("n","<leader>fh" ,"<cmd>Telescope help_tags<CR>")
+vim.keymap.set("n","<F3>", ":NERDTreeToggle<CR>")
+vim.keymap.set("n","<leader>AA", ":TestSuite<CR>")
 
-nnoremap("<Leader>ga",":Gwrite<CR>")
-nnoremap("<Leader>gc",":Git commit --verbose<CR>")
-nnoremap("<Leader>gsh",":Git push<CR>")
-nnoremap("<Leader>gll",":Git pull<CR>")
-nnoremap("<Leader>gs",":Git<CR>")
-nnoremap("<Leader>gb",":Git blame<CR>")
-nnoremap("<Leader>gd",":Gvdiffsplit<CR>")
-nnoremap("<Leader>gr",":GRemove<CR>")
+vim.keymap.set("n","<Leader>ga",":Gwrite<CR>")
+vim.keymap.set("n","<Leader>gc",":Git commit --verbose<CR>")
+vim.keymap.set("n","<Leader>gsh",":Git push<CR>")
+vim.keymap.set("n","<Leader>gll",":Git pull<CR>")
+vim.keymap.set("n","<Leader>gs",":Git<CR>")
+vim.keymap.set("n","<Leader>gb",":Git blame<CR>")
+vim.keymap.set("n","<Leader>gd",":Gvdiffsplit<CR>")
+vim.keymap.set("n","<Leader>gr",":GRemove<CR>")
 
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n","J","mzJ`z")
+vim.keymap.set("n","<C-d>", "<C-d>zz")
+vim.keymap.set("n","<C-u>", "<C-u>zz")
+vim.keymap.set("n","n", "nzzzv")
+vim.keymap.set("n","N", "Nzzzv")
+
+
+vim.keymap.set("n","<leader>y", "\"+y")
+vim.keymap.set("v","<leader>y", "\"+y")
+vim.keymap.set("n","<leader>Y", "\"+Y")
+
+vim.keymap.set("n","<leader>x","<cmd>!chmod +x %<CR>", {silent=true})
 
 local result = vim.api.nvim_exec(
 [[
